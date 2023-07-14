@@ -6,7 +6,7 @@ function App() {
   const [val,setValue] = useState(1);
   return (
     <>
-    <h1>hello world</h1>
+    <h1>hello world {val}</h1>
     <Child1 value={val}/>
     </>
   );
