@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './App.css';
 import Child1 from './components/Child1';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const [val,setValue] = useState(1);
+  const data = useSelector((c)=> c.show.value);
   return (
     <>
-    <h1>hello world {val}</h1>
-    <Child1 value={val}/>
+    <h1>hello world {data}</h1>
+    <Child1/>
     </>
   );
 }

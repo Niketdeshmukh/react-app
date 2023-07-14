@@ -1,7 +1,10 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment } from '../features/showSlice';
 
 const SubChild1 = () => {
+    const dispatch = useDispatch();
+
     const data = useSelector((c)=>{
         console.log(c.show.value);
         return c.show.value;
@@ -10,7 +13,7 @@ const SubChild1 = () => {
     return (
         <>
             <div>SubChild1 value={data}</div>
-            <button>button</button>
+            <button onClick={()=>dispatch(increment())}>button</button>
         </>
     )
 }

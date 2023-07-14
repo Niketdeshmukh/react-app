@@ -8,10 +8,10 @@ export const showSlice = createSlice({
         showData:(state)=>{
             state.value=state.value;
         },
-        // addData:()=>{
-            
-        // }
+        increment:(state)=>{
+            state.value=state.value+1;
+        }
     }
 })
-export const {showData} =showSlice.actions;
+export const {showData,increment} =showSlice.actions;
 export default showSlice.reducer;
